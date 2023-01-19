@@ -10,17 +10,16 @@ for (var i = 0; i < skills.length; i++) {
 
 skillsEl.innerHTML = skillsHTML;
 
-
 function hideAllPages() {
   var pages = document.querySelectorAll(".page");
   pages.forEach(function (page) {
-   // console.info("inside for each", page.id);
+    // console.info("inside for each", page.id);
     hide(page.id);
   });
- // pages.forEach(function (page) {
- //   console.warn('inside pages.forEach', page);
- // });
-   /*
+  // pages.forEach(function (page) {
+  //   console.warn('inside pages.forEach', page);
+  // });
+  /*
   pagesIds.forEach(function (pageId) {
     hide(pageId);
    // console.warn("H",v,i);
@@ -61,5 +60,18 @@ function displayPage(id) {
   hideAllPages();
   show(id);
 }
+function initMenu() {
+  console.warn("init menu");
+  document.getElementById('top-menu-bar').addEventListener("click", function (e) {
+   // console.warn("click", e.target.matches('a'));
+    if (e.target.matches('a')) {
+     // var id = e.target.getAttribute("data-page");
+      var id = e.target.dataset.page;
+      console.warn("click", id,e.target);
+      displayPage(id);
+    }
+  });
+}
 displayPage("home");
 //displayHome();
+initMenu();
