@@ -10,119 +10,178 @@
   <body>
     <header>
       <header class="card2">
-        <div class="wrapp-header">
+        <div id="header-wrapper">
+          <div id="my-picture">
         <h1>Patcas Florian12</h1>
+          
       <img src="img.jpg" alt="Patcas Florian " width="75" />
+    </div>
       <h2 id="myId">Electronist @ Micro Game</h2>
     </div>
       
-      <ul id="top-menu-bar">
-        <li><a href="#" onclick="displayPage('home')">HOME</a></li>
-        <li><a href="#" onclick="displayPage('skills')">Skills</a></li>
-        <li><a href="#" onclick="displayPage('languages');">Known Languages</a></li>
-        <li><a href="#" onclick="displayPage('projects')">Projects</a></li>
-      <li><a href="#" onclick="displayPage('rubik')">Rubik</a></li>
+    <ul id="top-menu-bar">
+      <li><a href="#home" data-page="home">Home</a></li>
+      <li><a href="#skills" data-page="skills">Skills</a></li>
+      <li><a href="#projects" data-page="projects">Projects</a></li>
+      <li><a href="#languages" data-page="languages">Languages</a></li>
       </ul>
     </header>
 
     <section id="content">
       <div id="side-menu">
         <section>
-          <form action="">
-            <div>
-              <label for="subscriberEmail">Enter your Email</label>
-              <input
-                type="email"
-                required
-                name="email"
-                id="subscriberEmail"
-                placeholder="your@email.com"
-              />
+          <h2>Contact Form</h2>
+          <form action="" id="contact-form">
+            <div class="form-row">
+              <label for="e">Email</label>
+              <input type="email" id="e" name="em" placeholder="example@job.com" />
             </div>
-            <div>
-              <label for="subscriber">Name:</label>
-              <input
-                type="text"
-                required
-                name="nume"
-                id="subscriber"
-                placeholder="Full Name"
-              />
+            <div class="form-row">
+              <label for="contactName">Name</label>
+              <input type="text" id="contactName" name="nume" placeholder="Your name" />
             </div>
-            <button type="submit">Subscribe</button>
+            <div class="actions">
+              <button type="submit">Contact Us</button>
+            </div>
           </form>
         </section>
-        <section>Menu 2</section>
+
+        <section>
+          <h2>Rubik face challange</h2>
+          <form action="" id="rubikChallange">
+            <div class="top-toolbar">
+              <input type="number" name="size" value="3" min="1" max="10" required />
+              <button class="scrambleFace" type="submit">🔃 Scramble</button>
+            </div>
+            <div class="rubik-face"></div>
+          </form>
+        </section>
       </div>
 
       <div id="main">
-        <div id="home" class="page">
+        <div id="home" class="page" style="display: none">
           <h2>Home</h2>
+          <p>
+            Hey there... 👋! <br />
+            This page is about me... but can be and about you... if you learn with me 😉. I hope I can make a difference
+            and help you re-start your career in programming.
+          </p>
 
-          <p>Some info about me... comming soon!</p>
+          <h3>Linkedin recommendations</h3>
+          <ol>
+            <li>
+              Create and fill your linkedin profile. And you can also
+              <a
+                href="https://www.linkedin.com/help/linkedin/answer/87/customizing-your-public-profile-url?lang=en"
+                target="_blank"
+                >Personalize the URL for your profile</a
+              >.
+            </li>
+            <li>Link your linkedin and github accounts, post them here as well.</li>
+            <li>Find and join with your colegues / friends.</li>
+            <li>In your profile picture you should be serious and "rememberable".</li>
+          </ol>
         </div>
 
-        <div id="skills" class="page">
-          <h2>Skills</h2>
-
-          <ul id="skills-list"></ul>
+        <div id="skills" class="page" style="display: none">
+          <h2>Skills & Endorcements</h2>
+          <ul></ul>
         </div>
 
-        <div id="languages" class="page">
-          <h2>Known Languages</h2>
-          <table border="1">
-            <tr>
-              <th>Language</th>
-              <th>Level</th>
-            </tr>
-            <tr>
-              <td>Romanian</td>
-              <td>Native</td>
-            </tr>
-            <tr>
-              <td>English</td>
-              <td>Proficient</td>
-            </tr>
-            <tr>
-              <td>Russian</td>
-              <td>So so</td>
-            </tr>
-          </table>
-        </div>
-
-        <div id="projects" class="page">
+        <div id="projects" class="page" style="display: none">
           <h2>Projects</h2>
-          
-          <p>Some info about me... comming soon!</p>
+          <ul>
+            <li>
+              <a href="https://github.com/RWS/Testy" target="_blank"
+                >Testy Framework (for Automated Acceptance Testing)</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/nmatei/simple-quiz-app" target="_blank">JS/HTML/CSS Quiz</a>
+            </li>
+            <li>
+              <a href="https://github.com/nmatei/web-intro-presentation" target="_blank">Web Presentation</a>
+            </li>
+            <li>
+              <a href="https://github.com/nmatei/chrome-bible-utilities" target="_blank"
+                >Chrome extension to for Bible.com</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/nmatei/speedcubing-algoritms" target="_blank">SpeedCubing Algorithms</a>
+            </li>
+            <li>
+              <a href="https://github.com/nmatei/warranties-list" target="_blank">Warranties List</a>
+            </li>
+            <li>
+              <a href="https://github.com/nmatei/teams-networking" target="_blank">Teams Networking</a>
+            </li>
+            <li>
+              <a href="https://github.com/nmatei/salus-logs" target="_blank">Salus Logs</a>
+            </li>
+          </ul>
         </div>
-        <div id="rubik" class="page">
-          <h2>Rubik</h2>
-          <table border="1">
+
+        <div id="languages" class="page" style="display: none">
+          <h2>Known Languages</h2>
+          <table>
             <tr>
               <th>Language</th>
               <th>Level</th>
             </tr>
             <tr>
               <td>Romanian</td>
-              <td>Native</td>
+              <td>Native or bilingual proficiency</td>
             </tr>
             <tr>
               <td>English</td>
-              <td>Proficient</td>
+              <td>Professional working proficiency</td>
             </tr>
             <tr>
               <td>Russian</td>
-              <td>So so</td>
+              <td>Elementary proficiency</td>
+            </tr>
+            <tr>
+              <td>Italian</td>
+              <td>Elementary proficiency</td>
+            </tr>
+            <tr>
+              <td>"Java Script"</td>
+              <td>Full professional proficiency</td>
             </tr>
           </table>
+        </div>
+
+        <div id="rubik" class="page" style="display: none">
+          <form action="" id="rubikChallangePage">
+            <div class="top-toolbar">
+              <input type="number" name="size" value="5" min="1" max="20" required />
+              <button class="scrambleFace" type="submit">🔃 Scramble</button>
+            </div>
+            <div class="rubik-face"></div>
+          </form>
         </div>
       </div>
     </section>
-
-    <footer>
-      <a target="_blank" href="https://www.google.com">Google</a>
-    </footer>
-
-    <script src="index.js"></script>
-  </body>
-</html>
+        <footer class="card">
+          
+        
+          <a href="http://www.google.ro">Google</a>
+        <a href="https://github.com/nmatei">github</a>
+        <a
+          href="https://github.com/nmatei"
+          target="_blank"
+          rel="noopener noreferrer"
+          >github</a>
+        
+      </footer>
+    <script>
+      console.info("page loaded");
+      console.debug(2 * 3+1);
+      console.warn(2*(3+1));
+    </script>
+    <script src="index.js">
+    
+    </script>
+      </body>
+    </html>

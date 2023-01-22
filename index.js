@@ -13,12 +13,13 @@ var skillsHTML = "";
  // skillsHTML +=
  //   "<li>" + skills[i].name + "-" + skills[i].endorcements + "</li>";
 //}
-skills.forEach(function (skill) {
+var s = skills.map(function (skill) {
   console.info(skill.name);
-  skillsHTML +=
-  "<li>" + skill.name + "-" + skill.endorcements + "</li>";
+// return "<li>" + skill.name + "-" + skill.endorcements + "</li>";
+return `<li> ${ skill.name}  - ${skill.endorcements} </li>`;
 });
-skillsEl.innerHTML = skillsHTML;
+console.warn("s", s.join(""));
+skillsEl.innerHTML = s.join("");
 
 function hideAllPages() {
   var pages = document.querySelectorAll(".page");
